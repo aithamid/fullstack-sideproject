@@ -1,9 +1,12 @@
-import Image from 'next/image'
+import { Button } from "@/components/ui/button"
+import { ModeToggle } from "@/components/ModeToggle"
+import { NavigationMenuDemo } from "@/components/NavBar"
 
 export default function Home() {
   return (
-    <main>
-      Hello World
-    </main>
+    <div>
+      <NavigationMenuDemo />
+      <ModeToggle />
+    </div>
   )
 }
