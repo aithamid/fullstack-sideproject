@@ -1,5 +1,12 @@
 {
     "Index": {
       "title": "Bonjour le monde!"
+    },
+    "Navbar": {
+      "home": "Accueil",
+      "schedule": "EDT",
+      "news": "Actualités",
+      "resources": "Ressources",
+      "events": "Événements"
     }
   }

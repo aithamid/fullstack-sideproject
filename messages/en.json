@@ -1,5 +1,12 @@
 {
     "Index": {
       "title": "Hello world!"
+    },
+    "Navbar": {
+      "home": "Home",
+      "schedule": "Schedule",
+      "news": "News",
+      "resources": "Resources",
+      "events": "Events"
     }
   }
