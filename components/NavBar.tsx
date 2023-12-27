@@ -19,6 +19,7 @@ import LanguageToggle from "./LanguageToggle"
 
 
 export function NavigationMenuDemo() {
+  const t = useTranslations('Navbar');
 
   return (
     <div className={cn(
@@ -29,35 +30,35 @@ export function NavigationMenuDemo() {
         <NavigationMenuItem>
           <Link href="" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Home
+              {t('home')}
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Schedule
+            {t('schedule')}
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              News
+            {t('news')}
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Resources
+            {t('resources')}
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              Events
+            {t('events')}
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>

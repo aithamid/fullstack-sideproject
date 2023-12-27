@@ -8,14 +8,20 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { Languages } from 'lucide-react';
+import { useRouter,  usePathname } from 'next/navigation';
 
 export function LanguageToggle() {
-  // Fonction pour changer de langue
-  const setLanguage = (language: string) => {
+    // Fonction pour changer de langue
+    const pathname = usePathname();
+    const router = useRouter();
+
+    const setLanguage = (language: string) => {
     // Logique de changement de langue
-    console.log(`Language set to ${language}`);
+    console.log(`Language set to ${language} in pathname : ${pathname}`);
     // Ici, vous pouvez intégrer la logique de changement de langue, comme i18n
+    router.push(pathname);
   };
+
 
   return (
     <DropdownMenu>

@@ -3,7 +3,7 @@ import createMiddleware from 'next-intl/middleware';
 export default createMiddleware({
   // A list of all locales that are supported
   locales: ['fr', 'en'],
-  localePrefix: 'as-needed',
+  localePrefix: 'as-default',
  
   // Used when no locale matches
   defaultLocale: 'fr'
