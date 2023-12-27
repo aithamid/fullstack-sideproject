@@ -14,18 +14,11 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { ModeToggle } from "./ModeToggle"
-import {useTranslations} from 'next-intl';
+import {useTranslations} from 'next-intl'
+import LanguageToggle from "./LanguageToggle"
 
-interface NavbarTitleProps {
-  home: string;
-  schedule: string;
-  news: string;
-  resources: string;
-  events: string;
-}
 
 export function NavigationMenuDemo() {
-  /*const t = useTranslations('Index');*/
 
   return (
     <div className={cn(
@@ -68,9 +61,14 @@ export function NavigationMenuDemo() {
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
+        <NavigationMenuItem>
+              <ModeToggle />
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+              <LanguageToggle />
+        </NavigationMenuItem>
       </NavigationMenuList>
       </NavigationMenu>
-      <ModeToggle />
     </div>
     
   )
