@@ -16,12 +16,13 @@ import {
   TabsTrigger,
 } from "@/components/ui/tabs"
 import { CalendarDateRangePicker } from "./components/date-range-picker"
-import { MainNav } from "./components/main-nav"
+import { MainNav } from "@/components/main-nav"
 import { Overview } from "./components/overview"
 import { RecentSales } from "./components/recent-sales"
-import { UserNav } from "./components/user-nav"
+import { UserNav } from "@/components/user-nav"
 import { ModeToggle } from "@/components/ModeToggle"
 import LanguageToggle from "@/components/LanguageToggle"
+import { NavBarFinal } from "@/components/NavBar"
 
 export const metadata: Metadata = {
   title: "Dashboard",
@@ -48,33 +49,7 @@ export default function DashboardPage() {
         />
       </div>
       <div className="hidden flex-col md:flex">
-        <div className="border-b">
-          <div className="flex h-16 items-center px-4">
-          <div className="relative z-20 flex items-center text-lg font-medium">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="mr-2 h-6 w-6"
-            >
-              <path d="M2 12h4l3 9 3-9h4" />
-              <circle cx="12" cy="4" r="2" />
-            </svg>
-
-              Proactive
-            </div>
-            <MainNav className="mx-6" />
-            <div className="ml-auto flex items-center space-x-4">
-              <UserNav />
-              <LanguageToggle />
-              <ModeToggle />
-            </div>
-          </div>
-        </div>
+      <NavBarFinal />
         <div className="flex-1 space-y-4 p-8 pt-6">
           <div className="flex items-center justify-between space-y-2">
             <h2 className="text-3xl font-bold tracking-tight">Dashboard</h2>
@@ -165,7 +140,7 @@ export default function DashboardPage() {
                     </svg>
                   </CardHeader>
                   <CardContent>
-                    <div className="text-2xl font-bold">3 days</div>
+                    <div className="text-2xl font-bold">3 Days</div>
                     <p className="text-xs text-muted-foreground">
                       a week on average this month
                     </p>

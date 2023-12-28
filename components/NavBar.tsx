@@ -16,54 +16,24 @@ import {
 import { ModeToggle } from "./ModeToggle"
 import {useTranslations} from 'next-intl'
 import LanguageToggle from "./LanguageToggle"
+import { MainNav } from "./main-nav"
+import { UserNav } from "./user-nav"
 
 
-export function NavigationMenuDemo() {
+export function NavBarFinal() {
   const t = useTranslations('Navbar');
 
   return (
-    <div className={cn(
-      "flex items-center justify-center py-2",
-    )}>
-      <NavigationMenu>
-      <NavigationMenuList>
-        <NavigationMenuItem>
-          <Link href="" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              {t('dashboard')}
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            {t('tasks')}
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            {t('sleep')}
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            {t('account')}
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-              <ModeToggle />
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-              <LanguageToggle />
-        </NavigationMenuItem>
-      </NavigationMenuList>
-      </NavigationMenu>
+    <div className="border-b">
+    <div className="flex h-16 items-center px-4">
+      <MainNav className="mx-6" />
+      <div className="ml-auto flex items-center space-x-4">
+        <UserNav />
+        <LanguageToggle />
+        <ModeToggle />
+      </div>
     </div>
+</div>
     
   )
 }

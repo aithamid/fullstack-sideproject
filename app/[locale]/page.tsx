@@ -7,7 +7,6 @@ export default function Home() {
   const t = useTranslations('Index');
   return (
     <>
-    <NavigationMenuDemo />
     <div>
       <Link href="/fr" locale="fr">
         Français
