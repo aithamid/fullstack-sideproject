@@ -3,10 +3,14 @@
       "title": "Hello world!"
     },
     "Navbar": {
-      "home": "Home",
-      "schedule": "Schedule",
-      "news": "News",
-      "resources": "Resources",
-      "events": "Events"
+      "dashboard": "Dashboard",
+      "tasks": "Tasks",
+      "sleep": "Sleep",
+      "settings": "Settings"
+    },
+    "ModeToggle": {
+      "system": "System",
+      "light": "Light",
+      "dark": "Dark"
     }
   }

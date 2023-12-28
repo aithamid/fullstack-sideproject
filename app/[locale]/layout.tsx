@@ -29,8 +29,8 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
 
   return (
     <html lang={locale}>
-      <body className={inter.className}>
       <NextIntlClientProvider messages={messages}>
+        <body className={"${inter.className} relative flex min-h-screen flex-col bg-background"}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -39,8 +39,8 @@ export default function RootLayout({ children, params }: RootLayoutProps) {
         >
         {children}
         </ThemeProvider>
-      </NextIntlClientProvider>
       </body>
+      </NextIntlClientProvider>
     </html>
   )
 }
