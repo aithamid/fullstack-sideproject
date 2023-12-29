@@ -56,9 +56,6 @@ export default async function TaskPage() {
               Here&apos;s a list of your tasks for this month!
             </p>
           </div>
-          <div className="flex items-center space-x-2">
-            <UserNav />
-          </div>
         </div>
         <DataTable data={tasks} columns={columns} />
       </div>
